@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Results</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">PTsearcher</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sources">Sources</a>
+            </li>
+            <li class = "nav-item">
+              <a class="nav-link" href = '/formatting'>Formatting</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pricing">Pricing</a>
+          </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Search for your elements here</h1>
+          <p class="lead">Make sure to follow the <a href = "/formatting">formatting</a></p>
+        </div>
+      </div>
+{%if h==1%}
+<form method="POST">
+  <div class="form-group">
+      <input type="text" name = "d1"class="form-control-sm" placeholder="Enter name, Atomic number, or Atomic symbol" aria-label="Username" aria-describedby="basic-addon1">
+      <button type="submit" class="btn btn-outline-primary btn-sm">Search</button>
+  </div>
+</form>
+{%endif%}
+{%if h==2%}
+<form method="POST">
+    <div class="form-group">
+        <input type="text" name = "d1"class="form-control-sm" placeholder="Enter name, Atomic number, or Atomic symbol" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" name = "d2"class="form-control-sm" placeholder="Enter name, Atomic number, or Atomic symbol" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="submit" class="btn btn-outline-primary btn-sm">Search</button>
+      </div>
+  </form>
+{%endif%}
+{%if h==3%}
+<form method="POST">
+    <div class="form-group">
+        <input type="text" name = "d1"class="form-control-sm" placeholder="Enter name, Atomic number, or Atomic symbol" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" name = "d2"class="form-control-sm" placeholder="Enter name, Atomic number, or Atomic symbol" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" name = "d3"class="form-control-sm" placeholder="Enter name, Atomic number, or Atomic symbol" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="submit" class="btn btn-outline-primary btn-sm">Search</button>
+      </div>
+  </form>
+{%endif%}
+{%if n ==1:%}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{dict["namee"]}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Atomic number: {{dict["numm"]}}</li>
+    <li class="list-group-item">Atomic weight: {{dict["weight"]}}</li>
+    <li class="list-group-item">Atomic Symbol: {{dict["sym"]}} </li>
+    <li class="list-group-item">Melting Point: {{dict["mp"]}} </li>
+    <li class="list-group-item">Boiling Point: {{dict["bp"]}} </li>
+    <li class="list-group-item">Discovery Year: {{dict["disc"]}} </li>
+    <li class="list-group-item">Group: {{dict["group"]}} </li>
+    <li class="list-group-item">Electron Config: {{dict["elconfig"]}} </li>
+  </ul>
+  <div class="card-body">
+    <a href="https://www.google.com/" class="card-link">For more info</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+{%endif%}
+{%if n==2:%}
+<div class = "card-group">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{dict["namee"]}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Atomic number: {{dict["numm"]}}</li>
+    <li class="list-group-item">Atomic weight: {{dict["weight"]}}</li>
+    <li class="list-group-item">Atomic Symbol: {{dict["sym"]}} </li>
+    <li class="list-group-item">Melting Point: {{dict["mp"]}} </li>
+    <li class="list-group-item">Boiling Point: {{dict["bp"]}} </li>
+    <li class="list-group-item">Discovery Year: {{dict["disc"]}} </li>
+    <li class="list-group-item">Group: {{dict["group"]}} </li>
+    <li class="list-group-item">Electron Config: {{dict["elconfig"]}} </li>
+  </ul>
+  <div class="card-body">
+    <a href="https://www.google.com/" class="card-link">For more info</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{dict2["namee"]}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Atomic number: {{dict2["numm"]}}</li>
+    <li class="list-group-item">Atomic weight: {{dict2["weight"]}}</li>
+    <li class="list-group-item">Atomic Symbol: {{dict2["sym"]}} </li>
+    <li class="list-group-item">Melting Point: {{dict2["mp"]}} </li>
+    <li class="list-group-item">Boiling Point: {{dict2["bp"]}} </li>
+    <li class="list-group-item">Discovery Year: {{dict2["disc"]}} </li>
+    <li class="list-group-item">Group: {{dict2["group"]}} </li>
+    <li class="list-group-item">Electron Config: {{dict2["elconfig"]}} </li>
+  </ul>
+  <div class="card-body">
+    <a href="https://www.google.com/" class="card-link">For more info</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+</div>
+{%endif%}
+{%if n==3:%}
+<div class = "card-group">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{dict["namee"]}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Atomic number: {{dict["numm"]}}</li>
+    <li class="list-group-item">Atomic weight: {{dict["weight"]}}</li>
+    <li class="list-group-item">Atomic Symbol: {{dict["sym"]}} </li>
+    <li class="list-group-item">Melting Point: {{dict["mp"]}} </li>
+    <li class="list-group-item">Boiling Point: {{dict["bp"]}} </li>
+    <li class="list-group-item">Discovery Year: {{dict["disc"]}} </li>
+    <li class="list-group-item">Group: {{dict["group"]}} </li>
+    <li class="list-group-item">Electron Config: {{dict["elconfig"]}} </li>
+    </ul>
+    <div class="card-body">
+      <a href="https://www.google.com/" class="card-link">For more info</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{dict2["namee"]}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Atomic number: {{dict2["numm"]}}</li>
+    <li class="list-group-item">Atomic weight: {{dict2["weight"]}}</li>
+    <li class="list-group-item">Atomic Symbol: {{dict2["sym"]}} </li>
+    <li class="list-group-item">Melting Point: {{dict2["mp"]}} </li>
+    <li class="list-group-item">Boiling Point: {{dict2["bp"]}} </li>
+    <li class="list-group-item">Discovery Year: {{dict2["disc"]}} </li>
+    <li class="list-group-item">Group: {{dict2["group"]}} </li>
+    <li class="list-group-item">Electron Config: {{dict2["elconfig"]}} </li>
+    </ul>
+    <div class="card-body">
+      <a href="https://www.google.com/" class="card-link">For more info</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{dict3["namee"]}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Atomic number: {{dict3["numm"]}}</li>
+    <li class="list-group-item">Atomic weight: {{dict3["weight"]}}</li>
+    <li class="list-group-item">Atomic Symbol: {{dict3["sym"]}} </li>
+    <li class="list-group-item">Melting Point: {{dict3["mp"]}} </li>
+    <li class="list-group-item">Boiling Point: {{dict3["bp"]}} </li>
+    <li class="list-group-item">Discovery Year: {{dict3["disc"]}} </li>
+    <li class="list-group-item">Group: {{dict3["group"]}} </li>
+    <li class="list-group-item">Electron Config: {{dict3["elconfig"]}} </li>
+    </ul>
+    <div class="card-body">
+      <a href="https://www.google.com/" class="card-link">For more info</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  </div>
+{%endif%}
+</body>
