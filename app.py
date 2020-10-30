@@ -7,6 +7,7 @@ with open("c.txt","r") as txt1:
     reader= txt1.read().split("\n")
 def matcher(query, choices, limit=1):
     return process.extract(query, choices,limit = limit)
+m = "m"
 app = Flask(__name__)
 app.secret_key = "Iamsmartveryverysmart"
 @app.route("/")
