@@ -45,6 +45,7 @@ def results():
         if request.method == "POST":
             if int(num) == 1:
                 aasdu = request.form["d1"]
+                n=[]
                 try:
                     int(aasdu)
                 except ValueError:
@@ -52,10 +53,9 @@ def results():
                         aasdu = matcher(aasdu, read)
                     else:
                          aasdu = matcher(aasdu,reader)
-                n=[]
-                aasdu = aasdu[0]
-                (name, matchscore) = aasdu
-                aasdu = name
+                    aasdu = aasdu[0]
+                    (name, matchscore) = aasdu
+                    aasdu = name
                 for row in data:
                         for field in row:
                             if field == aasdu:
@@ -84,10 +84,10 @@ def results():
                         aasdu = matcher(aasdu, read)
                     else:
                          aasdu = matcher(aasdu,reader)
-                n=[]
-                aasdu = aasdu[0]
-                (name, matchscore) = aasdu
-                aasdu = name
+                    n=[]
+                    aasdu = aasdu[0]
+                    (name, matchscore) = aasdu
+                    aasdu = name
                 for row in data:
                     for field in row:
                         if field == aasdu:
@@ -112,10 +112,10 @@ def results():
                         natl = matcher(natl, read)
                     else:
                          natl= matcher(natl,reader)
-                n=[]
-                natl= natl[0]
-                (name, matchscore) = natl
-                natl = name
+                    n=[]
+                    natl= natl[0]
+                    (name, matchscore) = natl
+                    natl = name
                 for row1 in data:
                     for field1 in row1:
                         if field1 == natl:
@@ -146,10 +146,10 @@ def results():
                         aasdu = matcher(aasdu, read)
                     else:
                          aasdu = matcher(aasdu,reader)
-                n=[]
-                aasdu = aasdu[0]
-                (name, matchscore) = aasdu
-                aasdu = name
+                    n=[]
+                    aasdu = aasdu[0]
+                    (name, matchscore) = aasdu
+                    aasdu = name
                 for row in data:
                     for field in row:
                         if field == aasdu:
@@ -167,6 +167,7 @@ def results():
                                 "elconfig":row[10]
                                 }
                 natl=j[1]
+                n1=[]
                 try:
                     int(natl)
                 except ValueError:
@@ -174,11 +175,10 @@ def results():
                         natl = matcher(natl, read)
                     else:
                          natl= matcher(natl,reader)
-                n=[]
-                natl= natl[0]
-                (name, matchscore) = natl
-                natl = name
-                n1=[]
+                    n=[]
+                    natl= natl[0]
+                    (name, matchscore) = natl
+                    natl = name
                 for row1 in data:
                     for field1 in row1:
                         if field1 == natl:
@@ -196,6 +196,7 @@ def results():
                                 "elconfig":row1[10]
                                 }
                 naty = j[2]
+                n2=[]
                 try:
                     int(naty)
                 except ValueError:
@@ -203,10 +204,10 @@ def results():
                         naty = matcher(naty, read)
                     else:
                          naty = matcher(naty,reader)
-                n2=[]
-                naty = naty[0]
-                (name, matchscore) = naty
-                naty = name
+                    
+                    naty = naty[0]
+                    (name, matchscore) = naty
+                    naty = name
                 for row2 in data:
                     for field2 in row2:
                         if field2 == naty:
